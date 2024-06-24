@@ -1,0 +1,23 @@
+1. mkdir restaurant-project
+2. cd restaurant-project
+3. npm new restaurant-app
+4. npm install bootstrap jquery --save
+5. npm install popper.js
+
+1. mkdir restaurant-project/restaurant-server
+2. cd restaurant-server
+3. npm init
+4. npm i json-server
+5. npm install -g json-server
+6. make db.json file with code
+	{
+	  "posts": [
+		{ "id": 1, "title": "json-server", "author": "typicode" }
+	  ],
+	  "comments": [
+		{ "id": 1, "body": "some comment", "postId": 1 }
+	  ],
+	  "profile": { "name": "typicode" }
+	}
+	
+7. json-server --watch db.json

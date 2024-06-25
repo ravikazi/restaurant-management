@@ -1,0 +1,29 @@
+<div class="row">
+    <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success !</strong> Registered successfully.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="closeAlert()"></button>
+      </div>
+    <div class="container text-center"><h3>Registration</h3></div>
+
+    <div class="col-md-6 offset-md-3">
+      <form [formGroup]="addFormData" (ngSubmit)="addUser()">
+        <div class="mb-3">
+          <label for="forName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="forName" formControlName="name" aria-describedby="nameHelp">
+        </div>
+        <div class="mb-3">
+          <label for="forEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="forEmail" formControlName="email" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="forPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="forPassword" formControlName="password" aria-describedby="passwordHelp">
+          </div>
+        
+        <div class="container text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>&nbsp;&nbsp;
+          <button type="reset" class="btn btn-warning ml-5">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="container text-center"><h3>Update Restaurant</h3></div>
+    <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Success !</strong> Restaurant has been updated successfully.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="closeAlert()"></button>
+    </div>
+    <div class="col-md-6 offset-md-3">
+      <form [formGroup]="addFormData" (ngSubmit)="updateRestaurantData()">
+        <div class="mb-3">
+          <label for="forName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="forName" formControlName="name" aria-describedby="nameHelp">
+        </div>
+        <div class="mb-3">
+          <label for="forEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="forEmail" formControlName="email" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="forMobile" class="form-label">Mobile</label>
+          <input type="text" class="form-control" id="forMobile" formControlName="mobile" aria-describedby="mobileHelp">
+        </div>
+        <div class="mb-3">
+          <label for="forAddress" class="form-label">Address</label>
+          <input type="textarea" class="form-control" id="forAddress" formControlName="address" aria-describedby="addressHelp">
+        </div>
+        
+        <div class="container text-center">
+          <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
